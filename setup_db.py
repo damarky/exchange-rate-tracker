@@ -8,9 +8,11 @@ cursor.execute("""
         date TEXT NOT NULL, 
         base_currency TEXT NOT NULL, 
         target_currency TEXT NOT NULL,
-        rate REAL NOT NULL, 
+        rate REAL NOT NULL,
+        pct_change REAL,
         PRIMARY KEY (date, base_currency, target_currency)
     )
     """)
+
 conn.commit()
 conn.close()
