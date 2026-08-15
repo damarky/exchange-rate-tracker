@@ -1,16 +1,34 @@
+import logging
 import sqlite3
 
 import requests
 
+logging.basicConfig(
+    filename='pipeline.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+
 conn = sqlite3.connect('rates.db')
 cursor = conn.cursor()
 
-response = requests.get("https://api.frankfurter.dev/v1/latest?base=USD&symbols=JPY,PHP")
+logging.info("Starting fetch run")
+try:
+    response = requests.get("https://api.frankfurter.dev/v1/latest?base=USD&symbols=JPY,PHP")
+except requests.exceptions.RequestException as e:
+    logging.error(f"Request failed: {e}")
+    exit()
+
+if response.status_code != 200:
+    logging.error(f"Request failed with status {response.status_code}")
+    exit()
 
 data = response.json()
 
 current_date = data['date']
 base_currency = data['base']
+logging.info(f"Fetched {len(data['rates'])} currency rates")
 
 for key, value in data['rates'].items():
     
@@ -32,7 +50,7 @@ for key, value in data['rates'].items():
         pct_change = (new_rate - old_rate) / old_rate * 100
     else:
         pct_change = None
-    print(pct_change)
+        logging.warning(f"No previous date found for {target_currency}")
     cursor.execute(
         "INSERT OR IGNORE INTO rates (date, base_currency, target_currency, rate, pct_change) VALUES (?, ?, ?, ?, ?)",
         (current_date, base_currency, target_currency, new_rate, pct_change)
@@ -40,3 +58,4 @@ for key, value in data['rates'].items():
 
 conn.commit()
 conn.close()
+logging.info("Fetch run completed successfully")
