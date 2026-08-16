@@ -1,0 +1,7 @@
+2026-08-16 13:06:06,974 - INFO - Connecting to rates.db
+2026-08-16 13:06:06,974 - INFO - Creating DB if it does not exist.
+2026-08-16 13:06:06,974 - INFO - Starting fetch run
+2026-08-16 13:06:07,122 - INFO - Fetched 2 currency rates
+2026-08-16 13:06:07,123 - WARNING - No previous date found for JPY
+2026-08-16 13:06:07,123 - WARNING - No previous date found for PHP
+2026-08-16 13:06:07,123 - INFO - Fetch run completed successfully
