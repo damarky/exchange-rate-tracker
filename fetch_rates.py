@@ -9,9 +9,24 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-
-conn = sqlite3.connect('rates.db')
+DATABASE_NAME = 'rates.db'
+logging.info(f"Connecting to {DATABASE_NAME}")
+conn = sqlite3.connect(DATABASE_NAME)
 cursor = conn.cursor()
+
+logging.info("Creating DB if it does not exist.")
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS rates (
+        date TEXT NOT NULL, 
+        base_currency TEXT NOT NULL, 
+        target_currency TEXT NOT NULL,
+        rate REAL NOT NULL,
+        pct_change REAL,
+        PRIMARY KEY (date, base_currency, target_currency)
+    )
+    """)
+
+conn.commit()
 
 logging.info("Starting fetch run")
 try:
