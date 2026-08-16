@@ -1,0 +1,46 @@
+2026-08-15 23:06:19,915 - WARNING - No previous date found for PHP
+2026-08-15 23:07:31,144 - INFO - Starting fetch run
+2026-08-15 23:07:31,714 - INFO - Fetched 2 currency rates
+2026-08-15 23:07:31,715 - WARNING - No previous date found for PHP
+2026-08-15 23:10:18,401 - INFO - Starting fetch run
+2026-08-15 23:10:18,960 - INFO - Fetched 2 currency rates
+2026-08-15 23:10:18,961 - WARNING - No previous date found for PHP
+2026-08-15 23:10:18,961 - INFO - Fetch run completed successfully
+2026-08-15 23:10:50,422 - INFO - Starting fetch run
+2026-08-15 23:13:49,805 - INFO - Fetched 2 currency rates
+2026-08-15 23:13:49,806 - WARNING - No previous date found for PHP
+2026-08-15 23:13:49,806 - INFO - Fetch run completed successfully
+2026-08-15 23:14:14,932 - INFO - Starting fetch run
+2026-08-15 23:14:15,412 - INFO - Fetched 2 currency rates
+2026-08-15 23:14:15,425 - WARNING - No previous date found for PHP
+2026-08-15 23:14:15,426 - INFO - Fetch run completed successfully
+2026-08-15 23:14:32,366 - INFO - Starting fetch run
+2026-08-15 23:14:32,383 - ERROR - Request failed: HTTPSConnectionPool(host='api.frankfurter.devvv', port=443): Max retries exceeded with url: /v1/latest?base=USD&symbols=JPY,PHP (Caused by NameResolutionError("HTTPSConnection(host='api.frankfurter.devvv', port=443): Failed to resolve 'api.frankfurter.devvv' ([Errno 11001] getaddrinfo failed)"))
+2026-08-15 23:17:10,021 - INFO - Starting fetch run
+2026-08-15 23:17:10,030 - ERROR - Request failed: HTTPSConnectionPool(host='api.frankfurter.devvv', port=443): Max retries exceeded with url: /v1/latest?base=USD&symbols=JPasY,PHP (Caused by NameResolutionError("HTTPSConnection(host='api.frankfurter.devvv', port=443): Failed to resolve 'api.frankfurter.devvv' ([Errno 11001] getaddrinfo failed)"))
+2026-08-15 23:17:21,671 - INFO - Starting fetch run
+2026-08-15 23:17:22,685 - INFO - Fetched 1 currency rates
+2026-08-15 23:17:22,687 - WARNING - No previous date found for PHP
+2026-08-15 23:17:22,687 - INFO - Fetch run completed successfully
+2026-08-15 23:17:40,919 - INFO - Starting fetch run
+2026-08-15 23:17:41,939 - ERROR - Request failed with status 404
+2026-08-15 23:22:42,930 - INFO - Starting fetch run
+2026-08-15 23:22:43,491 - INFO - Fetched 2 currency rates
+2026-08-15 23:22:43,492 - WARNING - No previous date found for PHP
+2026-08-15 23:22:43,493 - INFO - Fetch run completed successfully
+2026-08-16 20:36:04,776 - INFO - Starting fetch run
+2026-08-16 20:36:05,823 - INFO - Fetched 2 currency rates
+2026-08-16 20:46:18,290 - INFO - Connecting to rates.db
+2026-08-16 20:46:18,291 - INFO - Creating DB if it does not exist.
+2026-08-16 20:46:18,297 - INFO - Starting fetch run
+2026-08-16 20:46:19,112 - INFO - Fetched 2 currency rates
+2026-08-16 20:46:19,113 - WARNING - No previous date found for JPY
+2026-08-16 20:46:19,114 - WARNING - No previous date found for PHP
+2026-08-16 20:46:19,116 - INFO - Fetch run completed successfully
+2026-08-16 20:47:52,395 - INFO - Connecting to rates.db
+2026-08-16 20:47:52,396 - INFO - Creating DB if it does not exist.
+2026-08-16 20:47:52,399 - INFO - Starting fetch run
+2026-08-16 20:47:52,707 - INFO - Fetched 2 currency rates
+2026-08-16 20:47:52,707 - WARNING - No previous date found for JPY
+2026-08-16 20:47:52,709 - WARNING - No previous date found for PHP
+2026-08-16 20:47:52,713 - INFO - Fetch run completed successfully
