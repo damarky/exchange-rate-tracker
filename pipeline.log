@@ -49,3 +49,8 @@
 2026-08-23 02:19:50,528 - INFO - Starting fetch run
 2026-08-23 02:19:50,871 - INFO - Fetched 2 currency rates
 2026-08-23 02:19:50,872 - INFO - Fetch run completed successfully
+2026-08-24 02:18:11,221 - INFO - Connecting to rates.db
+2026-08-24 02:18:11,223 - INFO - Creating DB if it does not exist.
+2026-08-24 02:18:11,224 - INFO - Starting fetch run
+2026-08-24 02:18:11,528 - INFO - Fetched 2 currency rates
+2026-08-24 02:18:11,529 - INFO - Fetch run completed successfully
